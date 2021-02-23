@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color-Changing-button</title>
+</head>
+<script>
+    var colors = ["blue", "pink", "yellow", "red"];
+    var colorIndex = 0;
+    function changeColor() {
+        var col = document.getElementById("body");
+        if( colorIndex >= colors.length ) {
+            colorIndex= 0;
+        }
+        col.style.backgroundColor = colors[colorIndex];
+        colorIndex++;
+    }
+</script>
+<body id="body">
+    <button onclick="changeColor()" style="border-color: aqua; border-style: dashed; border-radius: 10px; border-width: 6px;">Change Background-Color</button>
+</body>
+</html>
